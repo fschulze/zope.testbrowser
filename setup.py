@@ -29,7 +29,7 @@ long_description = (
 
 tests_require = [
     'zope.testing',
-    'WebTest',
+    'WebTest<=1.3.4',
 ]
 
 
@@ -60,7 +60,7 @@ setup(
     tests_require=tests_require,
     install_requires=[
         # mechanize 0.2.0 folds in ClientForm, makes incompatible API changes
-        'mechanize>=0.2.0',
+        'mechanize>=0.2.0,<=0.2.5',
         'setuptools',
         'zope.interface',
         'zope.schema',
@@ -75,7 +75,7 @@ setup(
             'zope.app.testing >= 3.9.0dev',
         ],
         'wsgi': [
-            'WebTest',
+            'WebTest<=1.3.4',
         ]
     },
     include_package_data=True,
